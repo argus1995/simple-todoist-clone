@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --primary-red: #E44332;
+    --background-white: #FFFFFF;
+    --dark-gray: #202020;
+    --light-gray: #ECECEC;
+
+    --primary-red-hover: #C13529;
+    --light-red: #F2786A;
+
+    /* Typography */
+    --font-primary: 'Inter', sans-serif;
+    --font-size-base: 14px;
+    --font-size-heading: 24px;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2EFED;
+    color: var(--dark-gray);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: var(--font-weight-bold);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+header .kontainer-header {
+    width: 590px;
+    height: 80px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kontainer-header .profil {
+    display: flex;
+}
+
+.profil .avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.profil .identitas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.tanggal-waktu #waktu {
+    text-align: right;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main .kontainer-input {
+    background-color: #FCFAF6;
+    width: 590px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.kontainer-input .baris {
+    display: flex;
+    gap: 20px;
+}
+
+.baris .grup-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.baris .grup-tombol {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main .kontainer-hasil {
+    background-color: #FCFAF6;
+    width: 590px;
+    padding: 20px 20px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+.grup-tab {
+    display: flex;
+    list-style: none;
+    border-bottom: 2px solid var(--light-gray);
+    justify-content: space-between;
+}
+
+.grup-tab .tab-kiri {
+    display: flex;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.tab:hover {
+    border-bottom-color: #888;
+}
+
+.tab.aktif {
+    border-bottom-color: var(--primary-red);
+}
+
+.tab-hapus {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.konten-tab {
+    display: none;
+}
+
+.konten-tab.aktif {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0 10px;
+}
+
+.item-todo {
+    display: flex;
+}
+
+.item-todo-1 {
+    min-width: 6%;
+}
+
+.item-todo-2 {
+    min-width: 26%;
+}
+
+.item-todo-3 {
+    min-width: 63%;
+    word-wrap: break-word;
+}
+
+.item-todo-4 {
+    min-width: 5%;
+    text-align: right;
+}
+
+#hapus-todo {
+    cursor: pointer;
+}
+
+.button {
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: var(--font-weight-bold);
+    width: 150px;
+}
+
+.button:hover {
+    background-color: var(--primary-red-hover);
+}
+
+.button#batal {
+    background-color: var(--light-red);
+}
+
+.button#batal:hover {
+    background-color: var(--primary-red-hover);
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    font-size: var(--font-size-base);
+    font-family: var(--font-primary);
+    background-color: var(--background-white);
+    color: var(--dark-gray);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input:focus {
+    border-color: var(--primary-red);
+    box-shadow: 0 0 5px rgba(228, 67, 50, 0.5);
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+@media (max-width: 600px) {
+    header .kontainer-header {
+        width: 90%;
+    }
+
+    main .kontainer-input {
+        width: 90%;
+    }
+
+    main .kontainer-hasil {
+        width: 90%;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="kontainer-header">
+            <div class="profil">
+                <img class="avatar" src="/images/todoist.png" alt="">
+                <div class="identitas">
+                    <h3>Arief Agus</h3>
+                    <p>Software Engineer</p>
+                </div>
+            </div>
+            <div class="tanggal-waktu">
+                <p id="tanggal"></p>
+                <p id="waktu"></p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="kontainer-input">
+            <div class="baris">
+                <div class="grup-input">
+                    <label for="tanggal-todo">Tanggal</label>
+                    <input type="date" class="input" id="tanggal-todo" required>
+                </div>
+                <div class="grup-input">
+                    <label for="prioritas">Prioritas</label>
+                    <select class="input" id="prioritas">
+                        <option value="" disabled selected>Pilih</option>
+                        <option value="tinggi">Tinggi</option>
+                        <option value="sedang">Sedang</option>
+                        <option value="rendah">Rendah</option>
+                    </select>
+                </div>
+            </div>
+            <div class="baris">
+                <div class="grup-input">
+                    <label for="todo">To-Do</label>
+                    <textarea class="input" id="todo"></textarea>
+                </div>
+            </div>
+            <div class="baris">
+                <div class="grup-tombol">
+                    <button class="button" id="simpan"><i class="fa fa-save"></i> &nbsp;Simpan</button>
+                    <button class="button" id="batal"><i class="fa fa-arrow-rotate-right"></i> &nbsp;Batal</button>
+                </div>
+            </div>
+        </div>
+        <div class="kontainer-hasil">
+            <ul class="grup-tab">
+                <div class="tab-kiri">
+                    <li class="tab aktif" data-target="daftar-todo">To-Do</li>
+                    <li class="tab" data-target="daftar-selesai">Selesai</li>
+                </div>
+                <li class="tab-hapus">Hapus Semua</li>
+            </ul>
+            <div class="baris">
+                <ul class="konten-tab aktif" id="daftar-todo"></ul>
+                <ul class="konten-tab" id="daftar-selesai"></ul>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
