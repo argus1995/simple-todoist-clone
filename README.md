@@ -13,8 +13,6 @@ A simple Todoist-like application built using **HTML**, **CSS**, and **JavaScrip
 
 ![App Screenshot](./screenshot.png)
 
-> _Make sure to save a screenshot of the app UI and name it `screenshot.png`, then place it in the root directory or adjust the path above._
-
 ## 🚀 Live Demo
 
 👉 [Live Demo on Vercel](https://simple-todoist-clone.vercel.app/)
